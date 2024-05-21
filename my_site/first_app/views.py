@@ -9,11 +9,13 @@ articles = {
     'finance' : 'Finance Page',
     'politics' : 'Politics Page'
 }
-def simple_view(request):
-    return HttpResponse("SIMPLE VIEW")
 
-def sports_view(request):
-    return HttpResponse(articles['sports'])
+# Topic needs to be dynamically informed
+def news_view(request, topic):
+    return HttpResponse(articles[topic])
 
-def finance_view(request):
-    return HttpResponse(articles['finance'])
+def add_view(request, num1, num2):
+    # domain.com/first_app/num1/num2 --> num1+num2
+    result = num1 + num2
+    return HttpResponse(str(result))
+
