@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http.response import HttpResponse, HttpResponseNotFound
+from django.http.response import HttpResponse, HttpResponseNotFound, Http404
 
 
 # Create your views here
@@ -17,7 +17,7 @@ def news_view(request, topic):
         return HttpResponse(articles[topic])
     except:
         result = "No page for that topic"
-        return HttpResponseNotFound(result)
+        raise Http404("404 GENERIC ERROR!")
 
 def add_view(request, num1, num2):
     # domain.com/first_app/num1/num2 --> num1+num2
