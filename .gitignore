@@ -2,3 +2,4 @@
 .idea/vcs.xml
 .DS_Store
 my_site/db.sqlite3
+my_site/my_site/settings.py

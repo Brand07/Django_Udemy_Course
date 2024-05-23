@@ -6,6 +6,6 @@ from django.urls import reverse
 # Create your views here
 
 def simple_view(reqeust):
-    return render(request, '') #.html
+    return render(request, 'first_app/example.html') #.html
 
 
