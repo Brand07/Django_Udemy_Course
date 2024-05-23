@@ -3,3 +3,4 @@
 .DS_Store
 my_site/db.sqlite3
 my_site/my_site/settings.py
+my_site/my_site/__pycache__/settings.cpython-312.pyc
